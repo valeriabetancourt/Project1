@@ -55,6 +55,7 @@ $(document).ready(function () {
 
       database.ref().on("child_added", function (childSnapshot) {
         
+      if(childSnapshot.val().rank<=12){
         var card=$("<div>");
         card.addClass("card");
         var cardBody=$("<div>");
@@ -88,7 +89,9 @@ $(document).ready(function () {
         
         card.append(title).append(subtitle).append(rank).append(link).append(link2).append(link3);
 
-        $("#cards").append(card);
+        $("#cards").append(card);}
+       
+    
 
     }, function (errorObject) {
         console.log("Errors handled: " + errorObject.code);
