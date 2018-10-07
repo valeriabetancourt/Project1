@@ -55,7 +55,7 @@ $(document).ready(function () {
 
       database.ref().on("child_added", function (childSnapshot) {
         
-      if(childSnapshot.val().rank<=12){
+      if(childSnapshot.val().rank<=4){
         var card=$("<div>");
         card.addClass("card");
         var cardBody=$("<div>");
@@ -85,7 +85,7 @@ $(document).ready(function () {
         var link3=$("<a href='#'>").text("Bearish");
         link.addClass("card-link");
 
-        card.addClass("col-md-3");
+        card.addClass("col-lg-3 col-md-6 col-sm-12");
         
         card.append(title).append(subtitle).append(rank).append(link).append(link2).append(link3);
 
